@@ -3,7 +3,6 @@ Dabblinks - Head of Onyxia (49644) - 2023-08-13 17:43
 Éxorcism - Judgement Cover (49323) OS 2023-08-13 17:40
 Nythdarn - Armguards of the Nether Lord (47935) OS 2023-08-13 17:59
 Nythdarn - Collar of Ceaseless Torment (47915) OS 2023-08-13 17:55
-Nythdarn - Swift Alliance Steed (49044) MS 2023-08-13 18:17
 Nythdarn - The Lion's Maw (47966) MS 2023-08-13 18:19
 Pailock - Shawl of Fervent Crusader (48672) MS 2023-08-13 18:18
 Preformation - Trophy of the Crusade (47242) - 2023-08-13 18:20
@@ -12,6 +11,7 @@ Scaigh - Icehowl Cinch (47921) MS 2023-08-13 17:55
 Scaigh - Trophy of the Crusade (47242) - 2023-08-13 18:20
 Sierci - Ashen Sack of Gems (49294) MS 2023-08-13 17:43
 Sierci - Coronet of Transcendence (49317) OS 2023-08-13 17:41
+Sierci - Swift Alliance Steed (49044) MS 2023-08-13 18:17
 Sierci - Talisman of Volatile Power (47946) OS 2023-08-13 18:04
 Staminadaddi - Bulwark of the Royal Guard (47978) OS 2023-08-13 18:16
 Staminadaddi - Trophy of the Crusade (47242) - 2023-08-13 18:20
