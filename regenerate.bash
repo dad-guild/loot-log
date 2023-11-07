@@ -3,7 +3,11 @@
 # Canonicalizes the `discord` directory by sorting each file, then regenerates
 # the entire state of the `csv` directory using the `convert.py` utility.
 
-pushd discord > /dev/null
-ls -1 . | xargs -P32 -n1 -I{} sh -c 'sort {} -o {}.bak && mv {}.bak {} && ../convert.py {}'
+pushd gargul > /dev/null
+ls -1 . | xargs -P32 -n1 -I{} sh -c 'sort {} -o {}.bak && mv {}.bak {} && ../convert-gargul.py {}'
 popd > /dev/null
-mv discord/*.csv csv/
+mv gargul/*.csv csv/
+pushd rclc > /dev/null
+ls -1 . | xargs -P32 -n1 -I{} sh -c 'sort {} -o {}.bak && mv {}.bak {} && ../convert-rclc.py {}'
+popd > /dev/null
+mv rclc/*.csv csv/
