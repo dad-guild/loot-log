@@ -23,7 +23,6 @@ def main():
     # Write the output csv
     with open(out_filename, 'w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(('character', 'itemName', 'itemID', 'offspec', 'date'))
         [writer.writerow(item) for item in items if item[0] != '_disenchanted']
 
 if __name__ == "__main__":

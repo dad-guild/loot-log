@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import csv, re, sys, datetime
 
-def convert_row(row):
+# player,date,time,id,item,itemID,itemString,response,votes,class,instance,boss,difficultyID,mapID,groupSize,gear1,gear2,responseID,isAwardReason,subType,equipLoc,note,owner
+
+def parse_record(record):
     return [
-        row['player'].split('-')[0],
-        row['item'].strip('[]'),
-        int(row['itemID']),
-        1 if row['response'] == 'Offspec/Greed' else 0,
-        datetime.datetime.strptime(f'{row["date"]} {row["time"]}', '%m/%d/%y %H:%M:%S'),
+        record[0].split('-')[0],
+        record[4].strip('[]'),
+        int(record[5]),
+        1 if record[7] == 'Offspec/Greed' else 0,
+        datetime.datetime.strptime(f'{record[1]} {record[2]}', '%m/%d/%y %H:%M:%S'),
     ]
 
 def main():
@@ -20,15 +22,12 @@ def main():
 
     # Parse each line from the input
     with open(in_filename) as f:
-        reader = csv.DictReader(f)
-        items = [convert_row(x) for x in reader]
-
-    print(items)
+        reader = csv.reader(f, delimiter=',', quotechar='"')
+        items = [parse_record(record) for record in reader]
 
     # Write the output csv
     with open(out_filename, 'w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(('character', 'itemName', 'itemID', 'offspec', 'date'))
         [writer.writerow(item) for item in items if item[0] != '_disenchanted']
 
 if __name__ == "__main__":
